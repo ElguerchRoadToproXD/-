@@ -1,0 +1,181 @@
+/* ========================================
+   SHARED STYLES - CLEAN & SIMPLE
+   ======================================== */
+
+:root {
+    --primary-color: #3b82f6;
+    /* Blue 500 */
+    --primary-hover: #2563eb;
+    /* Blue 600 */
+    --secondary-color: #f3f4f6;
+    /* Gray 100 */
+    --text-primary: #1f2937;
+    /* Gray 800 */
+    --text-secondary: #4b5563;
+    /* Gray 600 */
+    --text-muted: #9ca3af;
+    /* Gray 400 */
+    --bg-color: #ffffff;
+    --card-bg: #f9fafb;
+    /* Gray 50 */
+    --border-color: #e5e7eb;
+    /* Gray 200 */
+
+    --radius: 8px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    direction: rtl;
+    background-color: var(--bg-color);
+    background-image: url('Images/979022ef365234ec42905328798db3b7.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+/* === Common Footer === */
+.footer {
+    background-color: var(--secondary-color);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.footer-brand h3 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-brand .footer-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.footer-column h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: var(--text-secondary);
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.sponsors-logos {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.sponsor-logo {
+    height: 40px;
+    opacity: 0.7;
+    filter: grayscale(100%);
+    transition: all 0.2s;
+}
+
+.apee-logo {
+    height: 110px;
+    /* Increased to visually match Lydex logo */
+}
+
+.sponsor-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.social-link {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    color: var(--text-secondary);
+}
+
+.social-link:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sponsors-logos {
+        justify-content: center;
+    }
+}

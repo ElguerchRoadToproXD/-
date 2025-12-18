@@ -1,0 +1,379 @@
+/* ========================================
+   MODERN ARABIC PLATFORM - CLEAN & SIMPLE
+   ======================================== */
+
+:root {
+    --primary-color: #3b82f6;
+    /* Blue 500 */
+    --primary-hover: #2563eb;
+    /* Blue 600 */
+    --secondary-color: #f3f4f6;
+    /* Gray 100 */
+    --text-primary: #1f2937;
+    /* Gray 800 */
+    --text-secondary: #4b5563;
+    /* Gray 600 */
+    --bg-color: #ffffff;
+    --card-bg: #f9fafb;
+    /* Gray 50 */
+    --border-color: #e5e7eb;
+    /* Gray 200 */
+
+    --radius: 8px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    direction: rtl;
+    background-color: var(--bg-color);
+    background-image: url('Images/979022ef365234ec42905328798db3b7.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* === Navigation Bar === */
+.navbar {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 0.95rem;
+}
+
+.btn-lang {
+    background-color: transparent;
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+.btn-lang:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-primary);
+}
+
+.btn-admin,
+.btn-prof {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-admin:hover,
+.btn-prof:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* === Hero Section === */
+.hero {
+    padding: 4rem 1.5rem;
+    text-align: center;
+    background-color: var(--bg-color);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    width: 100%;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: var(--text-primary);
+}
+
+.gradient-text {
+    color: var(--primary-color);
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* === Features === */
+.hero-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    text-align: center;
+    transition: transform 0.2s;
+    border: 1px solid var(--border-color);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+}
+
+/* === CTA Buttons === */
+.cta-buttons {
+    margin-top: 2rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+/* === Footer Section === */
+.footer {
+    background-color: var(--secondary-color);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    align-items: center;
+}
+
+.footer-brand {
+    text-align: center;
+    /* Center on mobile, can adjust for desktop */
+}
+
+.footer-brand h3 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.footer-legal ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-legal a {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.footer-legal a:hover {
+    color: var(--primary-color);
+}
+
+.footer-sponsors {
+    text-align: center;
+}
+
+.footer-sponsors h4 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.sponsors-logos {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.sponsor-logo {
+    height: 50px;
+    width: auto;
+    filter: grayscale(100%);
+    /* Optional: clean look */
+    opacity: 0.7;
+    transition: all 0.2s;
+}
+
+.apee-logo {
+    height: 115px;
+    /* Increased for visual balance */
+}
+
+.sponsor-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .footer-brand {
+        text-align: right;
+    }
+
+    .footer-sponsors {
+        text-align: left;
+    }
+}
+
+/* Quote Container */
+/* Quote Container */
+.quote-container {
+    background-image: url('Images/quote_background.png');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #333;
+    /* Darker border */
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    /* More padding */
+    margin: 2rem auto;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.quote-icon {
+    font-size: 3rem;
+    color: #ffd700;
+    /* Gold color */
+    opacity: 0.8;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.quote-text {
+    font-family: 'Amiri', 'Traditional Arabic', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.2;
+    color: #ffffff;
+    /* White text */
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.quote-author {
+    font-size: 1.1rem;
+    color: #ffd700;
+    /* Gold color */
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.logo-img {
+    height: 48px;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .nav-buttons {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        padding: 0.4rem 0.8rem;
+    }
+}
